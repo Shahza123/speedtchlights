@@ -1,14 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+/* eslint-disable @next/next/no-page-custom-font */
+
 import "./globals.css";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Desktop from "./components/layout/navbar/Desktop";
+import Mobile from "./components/layout/navbar/Mobile";
+import { Montserrat } from "next/font/google";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-montserrat",
 });
 
 export const metadata = {
@@ -19,11 +24,44 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+RO:wght@100..400&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+
+      </head>
+
+
+
+
+      <body className={montserrat.className}>
+
+        <Header />
+        <Desktop />
+        <div className="lg:hidden block">
+          <Mobile />
+        </div>
+        <div>
+          {children}
+        </div>
+        <Footer />
+
+
       </body>
     </html>
   );
 }
+
