@@ -2,7 +2,7 @@
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { PiLessThanLight, PiGreaterThanLight } from "react-icons/pi";
+
 import Image from "next/image";
 
 // Responsive settings to show images with partial visibility of left and right images
@@ -29,25 +29,38 @@ const responsive = {
 // Custom Button Group Component
 const ButtonGroup = ({ next, previous }) => {
     return (
-        <>
-            {/* Left Arrow – just left of center image */}
+        <div className="absolute inset-0 flex items-center justify-between px-[calc((100vw-862px)/2-30px)] z-10 pointer-events-none">
+            {/* Left Arrow */}
             <button
-                className="absolute top-1/2 left-[calc(50%-460px)] transform -translate-y-1/2 text-black text-[30px] cursor-pointer "
                 onClick={previous}
+                className="pointer-events-auto"
             >
-                <PiLessThanLight />
+                <Image
+                    src="/images/facelift/ico-arrow-up-white.svg"
+                    alt="previous"
+                    width={30}
+                    height={30}
+                    className="rotate-270 filter invert-0 brightness-0"
+                />
             </button>
 
-            {/* Right Arrow – just right of center image */}
+            {/* Right Arrow */}
             <button
-                className="absolute top-1/2 right-[calc(50%-460px)] transform -translate-y-1/2 text-black text-[30px] cursor-pointer "
                 onClick={next}
+                className="pointer-events-auto"
             >
-                <PiGreaterThanLight />
+                <Image
+                    src="/images/facelift/ico-arrow-up-white.svg"
+                    alt="next"
+                    width={30}
+                    height={30}
+                    className="rotate-90 filter invert-0 brightness-0"
+                />
             </button>
-        </>
+        </div>
     );
 };
+
 
 
 
@@ -56,8 +69,7 @@ const ButtonGroup = ({ next, previous }) => {
 const ProductMobileCarousels = () => {
     return (
 
-
-        <div className=" relative  container  mt-[29px] mb-[40px]">
+        <div className=" relative    mt-[29px] mb-[40px]">
 
             <Carousel
 
@@ -102,6 +114,8 @@ const ProductMobileCarousels = () => {
                 </div>
             </Carousel>
         </div>
+
+
 
     );
 };

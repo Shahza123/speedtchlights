@@ -25,40 +25,53 @@ const Navbar = () => {
           </p>
         </div>
 
-        <div className='flex  justify-between w-full 2xl:gap-2 md:gap-[18px] sm:gap-[15px] gap-[3px] px-[10px]'>
+        <div className='flex  justify-between w-full 2xl:gap-2 md:gap-[18px] sm:gap-[15px] gap-[3px] lg:pt-[0]  md:pt-[30px] md:pb-[20px] p-[10px]'>
           <div className='flex items-center xl:gap-3 md:gap-5 gap-[15px] nav_logo'>
-            <div className="relative overflow-hidden w-[80px] h-[36.16px] lg:w-[140px] xl:w-[120px] md:w-[112px] md:h-[50.45px] 2xl:w-full 2xl:h-auto">
+            <div className="relative overflow-hidden w-[80px] h-[36.16px] md:w-[112px] md:h-[50.45px] lg:w-[140px] xl:w-[120px] 2xl:w-full 2xl:h-auto">
               <img
                 src="/images/facelift/logo.webp"
                 alt="Cropped Image"
-                className="w-[300px] 2xl:w-full h-full 2xl:h-auto object-cover object-left"
+                className="w-[300px] h-auto min-h-full object-cover object-left"
               />
             </div>
 
-            <div className='flex items-center lg:gap-[15px] gap-[10px] h-[20] md:h-[25] xl:h-[44.06]'>
-              <Link href='https://www.bbb.org/us/tx/buda/profile/emergency-vehicle-equipment/speedtech-lights-inc-0825-90116661/" target="_blank'>
-                <Image
-                  src='/images/facelift/img-header-rate-1.webp'
-                  alt='logo.webp'
-                  width={163}
-                  height={44.06}
-                  className='w-[73.95] h-[20] md:w-[92.44] md:h-[25] xl:w-[163] xl:h-[44.06] shrink-0'
-                />
+
+            <div className='flex items-center gap-[10px] lg:gap-[15px]'>
+              {/* BBB Badge - using aspect ratio container for consistent scaling */}
+              <Link
+                href='https://www.bbb.org/us/tx/buda/profile/emergency-vehicle-equipment/speedtech-lights-inc-0825-90116661/'
+                target='_blank'
+              >
+                <div className='relative w-[73.95px] md:w-[92.44px] xl:w-[163px] aspect-[163/44.06] shrink-0'>
+                  <Image
+                    src='/images/facelift/img-header-rate-1.webp'
+                    alt='BBB logo'
+                    fill
+                    className='object-contain'
+                  />
+                </div>
               </Link>
-              <div className='border-l-[2px] border-black h-full shrink-0'></div>
+
+              {/* Divider */}
+              <div className='border-l-[2px] border-black h-[20px] md:h-[25px] xl:h-[44.06px] shrink-0'></div>
+
+              {/* 20 Years Badge */}
               <Link href='#'>
-                <Image
-                  src='/images/facelift/ico-20-years.webp'
-                  alt='20 years badge'
-                  width={65}
-                  height={42}
-                  className='w-[30.94px] h-[20px] md:w-[38.69px] md:h-[25px] xl:w-[65px] xl:h-[42px] shrink-0'
-                />
+                <div className='relative w-[30.94px] md:w-[38.69px] xl:w-[65px] aspect-[65/42] shrink-0'>
+                  <Image
+                    src='/images/facelift/ico-20-years.webp'
+                    alt='20 years badge'
+                    fill
+                    className='object-contain'
+                  />
+                </div>
               </Link>
             </div>
+
+
           </div>
 
-          <div className='items-center gap-[53px] text-black lg:flex hidden ml-auto mr-[35px]' >
+          <div className='items-center gap-[53px] text-black show-desktop-nav  hidden mr-[35px]' >
             <div
               onMouseEnter={() => setShowDropdown(true)}
               onMouseLeave={() => setShowDropdown(false)}
@@ -70,6 +83,7 @@ const Navbar = () => {
                   alt='SHOP icon'
                   width={27}
                   height={32.08}
+                  className='shrink-0'
                 />
                 <span className="text-[15px] leading-[22px] ">
                   SHOP
@@ -89,50 +103,60 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className='flex gap-[30px] items-center'>
-            <div className='w-[22px] h-[21px]' >
-              <Link href='/cart/index' className='lg:block hidden relative'>
-                <Image
-                  src='/images/facelift/ico-n-mini-cart.webp'
-                  alt='cart'
-                  width={22}
-                  height={21}
-                  className='cursor-pointer'
-                />
-                <span className='hidden lg:flex absolute -top-[5px] left-1/2 transform -translate-x-1/3 text-[#005BAB] text-[15px] min-w-[14px] h-[14px] items-center justify-center rounded-full leading-0 bg-white'>
-                  0
-                </span>
-              </Link>
-              <Link href='/cart/index' className='lg:hidden block'>
+
+
+          <div className='flex gap-[17px] items-center'>
+            <Link href="/users/login" className='phone-header hidden'>
+              <div className="w-[18px] h-[19px] cursor-pointer shrink-0 relative">
                 <Image
                   src='/images/facelift/ico-n-phone-mobile.svg'
-                  alt='phone'
-                  width={25}
-                  height={25.03}
-                  className='cursor-pointer w-[25px] h-[25.03px]'
+                  alt="user"
+                  fill
+                  className="object-contain"
                 />
-                <span className='absolute -top-2 left-1/2 transform -translate-x-1/2 text-[#005BAB] text-[11px] min-w-[14px] h-[14px] items-center justify-center rounded-full lg:flex hidden shrink-0'>
-                  0
-                </span>
-              </Link>
-            </div>
-
-            <Link href='/users/login'>
-              <Image
-                src='/images/facelift/ico-n-user.webp'
-                alt='user'
-                width={18}
-                height={19}
-                className='cursor-pointer'
-              />
+              </div>
             </Link>
-            <Image
-              src='/images/facelift/ico-n-search.webp'
-              alt='cart'
-              width={19}
-              height={19}
-              className='cursor-pointer lg:block hidden'
-            />
+
+            <Link href="/cart/index" className="relative hidden md:block w-[22px] h-[21px]">
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/facelift/ico-n-mini-cart.webp"
+                  alt="Shopping cart"
+                  fill
+                  className="object-contain cursor-pointer"
+                />
+              </div>
+              <span
+                className="absolute -top-[5px] left-1/2 transform -translate-x-1/3   text-[#005BAB] text-xs min-w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold shadow-sm"
+                aria-label="Cart item count"
+              >
+                0
+              </span>
+            </Link>
+
+
+            <Link href="/users/login" >
+              <div className="w-[18px] h-[19px] cursor-pointer shrink-0 relative">
+                <Image
+                  src="/images/facelift/ico-n-user.webp"
+                  alt="user"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </Link>
+
+            <Link href="/users/login" className='search-header hidden'>
+              <div className="w-[18px] h-[19px] cursor-pointer shrink-0 relative">
+                <Image
+                  src='/images/facelift/ico-n-search.webp'
+                  alt="user"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </Link>
+
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import TrustedIndustryName from './carousels/TrustedIndustryName'
 
 const TrustedBrand = () => {
     return (
@@ -8,73 +10,62 @@ const TrustedBrand = () => {
             <div>
                 <h2 className='text-center mb-[43px] text-[18px]  leading-[1.6666666667] font-medium '>THE MOST TRUSTED NAME IN THE INDUSTRY FOR OVER 20 YEARS.</h2>
                 <div className='flex flex-col space-y-[43px] text-black '>
-                    <div className='border  border-[rgba(0,0,0,.2)] lg:pt-[26px] lg:pb-[43px] pt-[10px] pb-[56px] rounded-[5px]  grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-[20px] px-3'>
 
-                        <div className='flex flex-col items-center'>
-                            <figure className='opacity-30 mb-[5px]  md:h-[56px] h-[46.6px] flex justify-center items-center'>
-                                <Image src="/images/ico-5-stars.svg" alt='error' width={52} height={24} />
-                            </figure>
-
-                            <h3 className='text-center mb-[7px] font-semibold text-[15.625px] leading-[1.3333333333] '>Thousands of 5-Star Reviews</h3>
-                            <p className='text-center md:text-[12px] text-[10px]  leading-[1.3333333333] font-light '>Shop with confidence with thousands of verified happy cusotmers.</p>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <figure className='opacity-30 mb-[5px]  md:h-[56px] h-[46.6px] flex justify-center items-center'>
-                                <Image src="/images/ico-shield.svg" alt='error' width={32} height={32} />
-                            </figure>
-                            <h2 className='text-center mb-[7px] font-semibold  text-[15.625px] leading-[1.3333333333] '>5 Year Warranties*</h2>
-                            <p className='text-center md:text-[12px] text-[10px]  leading-[1.3333333333] font-light '>High-performance and reliable SAE certified products. *See terms & conditions.</p>
-                        </div>
-
-                        <div className='flex flex-col items-center'>
-                            <figure className='opacity-30 mb-[5px]  md:h-[56px] h-[46.6px] flex justify-center items-center'>
-                                <Image src="/images/facelift/SAE-Badge copy.webp" alt='error' width={96} height={38} />
-                            </figure>
-                            <h2 className='text-center mb-[7px] font-semibold  text-[15.625px] leading-[1.3333333333] text-black text-nowrap'>SAE Certified Products</h2>
-                            <p className='text-center md:text-[12px] text-[10px]  leading-[1.3333333333] font-light '> Tested and certified high-performance, top-quality warning lights.</p>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <figure className='opacity-30 mb-[5px]  md:h-[56px] h-[46.6px] flex justify-center items-center'>
-                                <Image src="/images/ico-package.svg" alt='error' width={56} height={56} />
-                            </figure>
-
-                            <h2 className='text-center mb-[7px] font-semibold  text-[15.625px] leading-[1.3333333333] text-black'>Free Shipping on Orders $50+*</h2>
-                            <p className='text-center md:text-[12px] text-[10px]  leading-[1.3333333333] font-light '>Free Domestic Ground Shipping.
-
-                                *Use Code: FREESHIP</p></div>
-                        <div className='flex flex-col items-center'>
-                            <figure className='opacity-30 mb-[5px]  md:h-[56px] h-[46.6px] flex justify-center items-center '>
-                                <Image src="/images/ico-time.svg" alt='error' width={56} height={56} />
-                            </figure>
-                            <h2 className='text-center mb-[7px] font-semibold  text-[15.625px] leading-[1.3333333333] text-black'>In Stock • Fast Delivery</h2>
-                            <p className='text-center md:text-[12px] text-[10px]  leading-[1.3333333333] font-light '>In stock items. Ready to ship.
-                                Fast order processing.</p>
-                        </div>
-                    </div>
-                    <div className='py-[15px] border   border-[rgba(0,0,0,.2)] grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2  gap-x-[20px] justify-center rounded-[5px] mb-[43px] px-3'>
-                        <div>
-                            <Image src="/images/facelift/Shopper-Approved-Logo.webp" alt="error" width={279.39} height={139.69} className='shrink-0' />
-                        </div>
-                        <div>
-                            <Image src="/images/facelift/Trust-Pilot-Logo.webp" alt="error" width={279.39} height={139.69} />
-                        </div>
-                        <div>
-                            <Image src="/images/facelift/BBB Logo.webp" alt="error" width={279.39} height={139.69} />
-                        </div>
-                        <div>
-                            <Image src="/images/facelift/Facebook-Reviews-Logo_1.webp" alt="error" width={279.39} height={139.69} />
-                        </div>
-                        <div>
-                            <Image src="/images/facelift/Google-Reviews-Logo.webp" alt="error" width={279.39} height={139.69} />
-                        </div>
+                    <TrustedIndustryName />
 
 
-                    </div>
+                    <section className="n-our-features">
+                        <div className="n-container">
+                            <div className="grid-holder">
+                                <div className="images-grid">
+                                    <div className="images-frame   rounded-[5px]  border   border-[rgba(0,0,0,.2)]">
+                                        <div>
+                                            <Link href="https://www.shopperapproved.com/reviews/SpeedTechLights.com" passHref>
+                                                <figure className="Image">
+                                                    <Image src="/images/facelift/Shopper-Approved-Logo.webp" alt="Shopper Approved" width={279.39} height={139.69} className='shrink-0' />
+                                                </figure>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="https://www.trustpilot.com/review/speedtechlights.com" passHref>
+                                                <figure className="Image">
+                                                    <Image src="/images/facelift/Trust-Pilot-Logo.webp" alt="Trust Pilot" width={279.39} height={139.69} className='shrink-0' />
+                                                </figure>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="https://www.bbb.org/us/tx/buda/profile/emergency-vehicle-equipment/speedtech-lights-inc-0825-90116661/" passHref>
+                                                <figure className="Image">
+                                                    <Image src="/images/facelift/BBB Logo.webp" alt="BBB" width={279.39} height={139.69} className='shrink-0' />
+                                                </figure>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="https://www.facebook.com/SpeedTechLights/reviews" passHref>
+                                                <figure className="Image">
+                                                    <Image src="/images/facelift/Facebook-Reviews-Logo_1.webp" alt="Facebook Reviews" width={279.39} height={139.69} className='shrink-0' />
+                                                </figure>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="https://www.google.com/search?q=speedtech+lights&rlz=1C1ONGR_enUS1133US1133&oq=speedtech+lights&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYPDIGCAMQRRg9MgYIBBBFGD3SAQgzOTAyajBqMagCALACAA&sourceid=chrome&ie=UTF-8&sei=gmztZ830BojawN4PjrL-2Aw#lrd=0x864c1f1ad3bd9d83:0xad4b3b21d9032624,1" passHref>
+                                                <figure className="Image">
+                                                    <Image src="/images/facelift/Google-Reviews-Logo.webp" alt="Google Reviews" className='shrink-0' width={279.39} height={139.69} />
+                                                </figure>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
 
-        </div >
+        </div>
     )
 }
 
 export default TrustedBrand
+
+

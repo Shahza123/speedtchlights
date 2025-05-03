@@ -68,11 +68,12 @@ const ShopCategories = () => {
                 <h3 className='my-[21.5px] text-black  text-[18px]  font-bold  text-center'>OFF ROAD LIGHTS</h3>
 
                 <hr className="border-t-3 mb-[27px]" />
-                <div className='flex flex-wrap justify-center gap-5  md:gap-[27px] mb-[27px]'>
+                <div className='flex flex-wrap justify-center gap-4'>
 
 
 
                     <ProductCard WarningLights={OffRoadLights} />
+
 
                 </div>
 

@@ -8,12 +8,10 @@ import Desktop from "./components/layout/navbar/Desktop";
 import Mobile from "./components/layout/navbar/Mobile";
 import { Montserrat } from "next/font/google";
 
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   display: "swap",
-  variable: "--font-montserrat",
 });
 
 export const metadata = {
@@ -33,10 +31,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+RO:wght@100..400&display=swap"
-          rel="stylesheet"
-        />
+      
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
           rel="stylesheet"
@@ -49,9 +44,10 @@ export default function RootLayout({ children }) {
 
       <body className={montserrat.className}>
 
+
         <Header />
         <Desktop />
-        <div className="lg:hidden block">
+        <div className="hidden show-mobile-nav">
           <Mobile />
         </div>
         <div>

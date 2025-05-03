@@ -102,7 +102,7 @@ const MobileSidebar = ({ isNavOpen, setIsNavOpen }) => {
     ];
 
     const renderSubItems = (subItems, parentKey = "") => (
-        <div className="w-full" style={{fontFamily: "'Montserrat', sans-serif" }}>
+        <div className="w-full" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             {subItems.map((sub, idx) =>
                 typeof sub === "string" ? (
                     <div
@@ -157,12 +157,12 @@ const MobileSidebar = ({ isNavOpen, setIsNavOpen }) => {
                     </div>
                 )
             )}
-        </div >
+        </div>
     );
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full h-full overflow-auto bg-white z-50 transition-transform duration-500 ease-in-out ${isNavOpen ? "translate-x-0" : "-translate-x-full"} pt-9`} style={{fontFamily: "'Montserrat', sans-serif" }}
+            className={`fixed top-0 left-0 w-full h-full overflow-auto bg-white z-50 transition-transform duration-500 ease-in-out ${isNavOpen ? "translate-x-0" : "-translate-x-full"} pt-9`} style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
             <div
                 className="absolute top-[9px] right-4 cursor-pointer"
