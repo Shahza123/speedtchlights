@@ -233,7 +233,7 @@ export const OffRoadLights = [
     {
 
         id: 2,
-        title: "Work Lights/Scene Lighting",
+        title: "Work Lights",
         image: "/images/work-light.avif"
     },
     {
@@ -245,7 +245,7 @@ export const OffRoadLights = [
     {
 
         id: 4,
-        title: "COMBO WARNING/SPOTLIGHT",
+        title: "COMBO WARNING",
         image: "/images/combo.webp"
     },
 ]

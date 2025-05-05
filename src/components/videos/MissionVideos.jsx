@@ -5,12 +5,12 @@ import React from 'react'
 const MissionVideos = () => {
     return (
         <>
-            <div className='container md:mb-[60px] mb-[40px]'>
+            <div className='container md:mb-[60px] mb-[40px] font-opensans'>
                 <div className='bg-[rgb(242,242,242)]  rounded-[8px]  flex items-stretch mission-wrapper flex-col md:gap-5'>
                     <div className=" iframe-mission-video  w-full aspect-[16/9] flex-shrink-0">
                         <iframe
                             src="https://www.youtube.com/embed/abcd1234"
-                            className="w-full h-full rounded-tl-[8px] rounded-bl-[8px]"
+                            className="w-full h-full lg:rounded-tl-[8px] lg:rounded-bl-[8px]"
                             frameBorder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen

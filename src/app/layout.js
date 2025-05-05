@@ -1,20 +1,12 @@
-/* eslint-disable @next/next/no-page-custom-font */
-
 import "./globals.css";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-
-import Desktop from "./components/layout/navbar/Desktop";
-import Mobile from "./components/layout/navbar/Mobile";
-import { Montserrat } from "next/font/google";
 
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-montserrat",
-});
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+import Desktop from "@/components/layout/navbar/Desktop";
+import Mobile from "@/components/layout/navbar/Mobile";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -33,25 +25,20 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+RO:wght@100..400&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
+
+
 
       </head>
 
 
 
 
-      <body className={montserrat.className}>
+      <body >
+
 
         <Header />
         <Desktop />
-        <div className="lg:hidden block">
+        <div className="hidden show-mobile-nav">
           <Mobile />
         </div>
         <div>

@@ -28,7 +28,7 @@ const responsive = {
 const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     const { carouselState: { currentSlide } } = rest;
     return (
-        <div className="carousel-button-group absolute top-1/2  left-0 right-0 z-10 flex justify-between ">
+        <div className="carousel-button-group absolute top-1/2  left-0 right-0 z-10 flex justify-between f">
             {/* Previous Button */}
             <button
                 className={`text-black text-[40px] cursor-pointer p-0 rounded-full ${currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
@@ -51,7 +51,7 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
 
 const CustomerReviews = () => {
     return (
-        <div className="bg-[#ebecec]  md:mb-[43px]  mb-[26px]">
+        <div className="bg-[#ebecec]  md:mb-[43px]  mb-[26px] font-montserrat">
             <div className="container   py-[43px] relative mt-10">
                 <p className="md:mb-[43px] mb-[26px] text-black leading-[1.4166666667] font-medium text-center md:text-[24px] text-[21px]">
                     WHAT OUR CUSTOMERS THINK

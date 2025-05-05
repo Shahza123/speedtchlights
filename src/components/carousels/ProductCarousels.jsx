@@ -79,19 +79,51 @@ const ProductCarousels = () => {
         >
             {/* Carousel Item 1 */}
 
-            <Image src="/images/shop-now.jpg" alt="error" width={862} height={376} />
+            <div className="relative w-full h-[240px] sm:h-[280px] md:h-[320px] lg:h-[376px] overflow-hidden">
+                <Image
+                    src="/images/shop-now.jpg"
+                    alt="Banner"
+                    fill
+                    className="object-cover rounded"
+                />
+            </div>
+
 
             {/* Carousel Item 2 */}
 
-            <Image src="/images/shop-now.jpg" alt="error" width={862} height={376} />
+            <div className="relative w-full h-[240px] sm:h-[280px] md:h-[320px] lg:h-[376px] overflow-hidden">
+                <Image
+                    src="/images/shop-now.jpg"
+                    alt="Banner"
+                    fill
+                    className="object-cover rounded"
+                />
+            </div>
+
 
             {/* Carousel Item 3 */}
 
-            <Image src="/images/shop-now.jpg" alt="error" width={862} height={376} />
+            <div className="relative w-full h-[240px] sm:h-[280px] md:h-[320px] lg:h-[376px] overflow-hidden">
+                <Image
+                    src="/images/shop-now.jpg"
+                    alt="Banner"
+                    fill
+                    className="object-cover rounded"
+                />
+            </div>
+
 
             {/* Carousel Item 4 */}
 
-            <Image src="/images/shop-now.jpg" alt="error" width={862} height={376} />
+            <div className="relative w-full h-[240px] sm:h-[280px] md:h-[320px] lg:h-[376px] overflow-hidden">
+                <Image
+                    src="/images/shop-now.jpg"
+                    alt="Banner"
+                    fill
+                    className="object-cover rounded"
+                />
+            </div>
+
 
         </Carousel>
 

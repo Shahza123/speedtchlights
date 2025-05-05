@@ -4,16 +4,19 @@ import React from 'react'
 import { RiFacebookCircleFill } from 'react-icons/ri'
 
 
+
 const Header = () => {
 
   return (
     <>
-      <div className='bg-[#ebecec] w-full  py-[6px] flex justify-center' style={{ fontFamily: "Montseerat" }}>
-        <div className='container  flex items-center gap-[2rem] lg:justify-between justify-center text-center     px-[10px]'>
+      <div className='bg-[#ebecec] w-full  py-[6px] flex justify-center'>
+        <div className='container  flex items-center gap-[2rem] lg:justify-between justify-center text-center px-[10px]'>
 
-          <p className='md:text-[13px]   text-[11px]  leading-[1.2307692308]'>
+          <p className='md:text-[13px]   text-[11px]  leading-[1.2307692308]  font-montserrat '>
             <strong>
+
               FREE SHIPPING ON ORDERS $50+!* <span>USE CODE: FREESHIP</span>
+
             </strong>
           </p>
 

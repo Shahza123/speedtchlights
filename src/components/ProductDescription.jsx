@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProductDescription = () => {
     return (
-        <div className='container md:py-[43px] py-[26px]' style={{ fontFamily: 'Open Sans, sans-serif' }} >
+        <div className='container md:py-[43px] py-[26px] font-opensans'>
             <div className='grid grid-cols-2 gap-[20px] text-black  product-descrip '>
                 <div>
                     <h3 className=' text-[15px] mb-[24px] font-bold leading-[1.625] text-black'>LED POLICE LIGHTS, EMERGENCY & WARNING LIGHT BARS</h3>
