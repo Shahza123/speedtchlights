@@ -126,7 +126,7 @@ const ProductMobileCarousels = () => {
                 </div>
 
             </Carousel>
-        </div >
+        </div>
     );
 };
 

@@ -1,15 +1,12 @@
+import Link from 'next/link';
 import { AiOutlineClose } from 'react-icons/ai';
+import { columnData, navbarData } from "@/components/data/DummyData"
 
 export default function ShopDropdown({ onClose }) {
-    const columnHeadings = [
-        "PRODUCTS",
-        "SALE",
-        "SHOP BY INDUSTRY",
-        "MISC"
-    ];
+
 
     return (
-        <div className="bg-[#ebecec] w-full shadow-md py-10 transition-all duration-300 relative ease-in-out mt-2 h-full">
+        <div className="bg-[#ebecec]  w-full shadow-md py-10 transition-all duration-300 relative ease-in-out mt-2 h-full  ">
 
             <button
                 onClick={onClose}
@@ -23,36 +20,86 @@ export default function ShopDropdown({ onClose }) {
             </button>
 
             {/* Grid layout */}
-            <div className="max-w-7xl mx-auto px-6 relative grid gap-8 grid-cols-5">
-                {/* First two columns share the same heading */}
-                <div className="col-span-2 border-r pr-4 space-y-3">
-                    <h4 className="font-semibold text-base">{columnHeadings[0]}</h4>
+            <div className="container mx-auto px-6 relative grid gap-[48px] grid-cols-5 font-montserrat">
+                {/* First Column: Shared Heading with Two Subcolumns */}
+                <div className="col-span-2 border-r border-black pr-4 space-y-3">
+                    <h4 className="mb-[20px] text-[16px] leading-[1.375] font-medium uppercase">{navbarData.sharedHeading}</h4>
                     <div className="grid grid-cols-2 gap-4">
-                        {[0, 1].map((col) => (
-                            <ul key={col} className="space-y-1 text-sm">
-                                {[...Array(10)].map((_, i) => (
-                                    <li key={i}><a href="#">Item {i + 1}</a></li>
+
+                        {/* First Column: WARNING LIGHTS only */}
+                        <div className="space-y-2">
+                            {navbarData.sharedItems
+                                .filter(item => item.categoryName === "WARNING LIGHTS")
+                                .map((category, colIndex) => (
+                                    <div key={colIndex}>
+                                        <h5 className="font-semibold text-[15px] leading-[22px] mb-[15px] ">{category.categoryName}</h5>
+                                        <ul className="space-y-1 text-sm">
+                                            {category.products.map((product, productIndex) => (
+                                                <li key={productIndex}>
+                                                    <Link
+                                                        href="#"
+                                                        className="mb-[7px] font-normal text-[15px] leading-[22px] text-black hover:text-red-500 transition-all duration-300 ease"
+                                                    >
+                                                        {product}
+                                                    </Link>
+
+
+
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 ))}
-                            </ul>
-                        ))}
+                        </div>
+
+                        {/* Second Column: All Other Categories */}
+                        <div className="space-y-2">
+                            {navbarData.sharedItems
+                                .filter(item => item.categoryName !== "WARNING LIGHTS")
+                                .map((category, colIndex) => (
+                                    <div key={colIndex}>
+                                        <h5 className="font-semibold text-[15px] leading-[22px] mb-[15px] ">{category.categoryName}</h5>
+                                        <ul className="space-y-1 text-sm">
+                                            {category.products.map((product, productIndex) => (
+                                                <li key={productIndex}>
+                                                    <Link href="#" className='mb-[7px] font-normal text-[15px] leading-[22px] text-black hover:text-red-500 '>{product}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                        </div>
+
                     </div>
                 </div>
 
-                {/* Remaining 3 columns */}
-                {[1, 2, 3].map((col, index) => (
+
+                {/* Remaining Columns (Sale, Customization, and Shop by Industry) */}
+                {columnData.otherColumns.map((column, index) => (
                     <div
-                        key={col}
-                        className={`space-y-3 ${index < 2 ? 'border-r' : ''} pr-4`}
+                        key={index}
+                        className={`space-y-6 ${index < columnData.otherColumns.length - 1 ? 'border-r border-black' : ''} pr-4`}
                     >
-                        <h4 className="font-semibold text-base">{columnHeadings[col]}</h4>
-                        <ul className="space-y-1 text-sm">
-                            {[...Array(15)].map((_, i) => (
-                                <li key={i}><a href="#">Item {i + 1}</a></li>
-                            ))}
-                        </ul>
+                        {column.sections.map((section, sectionIndex) => (
+                            <div key={sectionIndex}>
+                                <h4 className="mb-[16px] text-[16px] leading-[1.375] font-medium uppercase">
+                                    {section.heading}
+                                </h4>
+                                <ul className="space-y-1 text-sm">
+                                    {section.items.map((item, itemIndex) => (
+                                        <li key={itemIndex}>
+                                            <Link href="#" className='text-black mb-[7px]  font-normal leading-[22px]text-[15px] hover:text-red-500'>{item}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
                 ))}
+
             </div>
+
+
         </div>
     );
 }

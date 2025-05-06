@@ -249,3 +249,147 @@ export const OffRoadLights = [
         image: "/images/combo.webp"
     },
 ]
+
+
+export const navbarData = {
+    sharedHeading: "PRODUCTS",  // Shared heading
+    sharedItems: [
+        {
+            categoryName: "WARNING LIGHTS",
+            products: [
+                "Grilles/Surface Mounts",
+                "Deck/Dash Lights",
+                "Visor Light Bars",
+                "Mini Light Bars",
+                "Full Size Light Bars",
+                "Hideaways/Surface Mounts",
+                "Traffic Advisors",
+                "Running Board Lights",
+                "Tailgate Warning Light Bars",
+                "Tow Truck Light Bars",
+                "Beacons",
+                "LED Road Flares",
+                "Head/Taillight Flashers",
+                "Interior Cabin Lights",
+                "Flashlights/Batteries"
+            ]
+        },
+        {
+            categoryName: "SIRENS & SPEAKERS",
+            products: [
+                "Sirens",
+                "Speakers"
+            ]
+        },
+        {
+            categoryName: "SWITCH BOXES & ACCESSORIES",
+            products: [
+                "Switch Boxes",
+                "Mounting Brackets",
+                "Acari Roof Mounts",
+                "Extension Cables",
+                "Replacement Parts"
+            ]
+        },
+        {
+            categoryName: "OFF ROAD LIGHTS",
+            products: [
+                "Off Road Light Bars",
+                "Work Lights/Scene Lighting",
+                "Floodlight Flush Mounts",
+                "Warning/Off Road Combo"
+            ]
+        }
+    ]
+};
+
+
+export const columnData = {
+    otherColumns: [
+        {
+            sections: [
+                {
+                    heading: "SALE",
+                    items: ["Sale Products", "Discount Packs", "Clearance Products"]
+                },
+                {
+                    heading: "CUSTOMIZATION",
+                    items: ["Customize a Light Bar"]
+                }
+            ]
+        },
+        {
+            sections: [
+                {
+                    heading: "SHOP BY INDUSTRY",
+                    items: [
+                        "All LED Light Bars",
+                        "Police Lights/Sirens",
+                        "Amber Warning Lights",
+                        "Fire Truck Lights/Sirens",
+                        "Ambulance Lights/Sirens",
+                        "Motorcycle Lights/Sirens",
+                        "Off Road Light Bars"
+                    ]
+                }
+            ]
+        },
+        {
+            sections: [
+                {
+                    heading: "MISC",
+                    items: [
+                        "Customize a Light Bar",
+                        "New Products",
+                        "Gift Cards",
+                        "Apparel",
+                        "Rewards Program",
+                        "Credit Application",
+                        "Government POs",
+                        "Request a Catalog"
+                    ]
+                }
+            ]
+        }
+    ]
+};
+
+
+// data/supportLinks.js
+export const supportLinks = [
+    { label: 'Rewards & Referral Program', href: '/support/rewards' },
+    { label: 'Shipping', href: '/support/shipping' },
+    { label: 'Returns', href: '/support/returns' },
+    { label: 'USA & International Warranty', href: '/support/warranty' },
+    { label: 'Terms & Conditions', href: '/support/terms' },
+    { label: 'Instruction Manuals', href: '/support/manuals' },
+    { label: 'FAQ', href: '/support/faq' },
+];
+
+// data/footerLinks.js
+export const MiscLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'Account Login', href: '/account/login' },
+    { label: 'Catalog', href: '/catalog' },
+    { label: 'Shopper Approved Reviews', href: '/reviews' },
+    { label: 'Patents', href: '/patents' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Use', href: '/terms-of-use' },
+    { label: 'Sitemap', href: '/sitemap' },
+];
+
+export const contactLinks = [
+    { label: 'General Questions', href: '/' },
+    { label: 'Track/Order Status', href: '/account/login' },
+    { label: 'Order Change/Cancellation', href: '/catalog' },
+    { label: 'Shopper Approved Reviews', href: '/reviews' },
+    { label: 'Order Issues', href: '/patents' },
+    { label: 'Returns/RMAs', href: '/blog' },
+    { label: 'Tech Support/Troubleshooting', href: '/privacy-policy' },
+    { label: 'Terms of Use', href: '/terms-of-use' },
+    { label: 'Account/Web Issues', href: '/sitemap' },
+];
+
+
+
